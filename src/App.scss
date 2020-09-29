@@ -1,0 +1,31 @@
+$background: lightblue;
+$textcolour: white;
+$colours: red, green, blue, orange;
+@import 'variables';
+@import 'textStyles';
+@import 'mixins';
+@import 'Counter';
+
+body {
+  padding: 10px;
+}
+
+.counter {
+  border: 1px solid black;
+  padding: 5px;
+  display: inline-block;
+  margin: 5px;
+  background-color: $background;
+}
+
+h3 {
+  color: $textcolour;
+}
+
+p {
+  color: $textcolour;
+}
+
+@for $i from 1 through 4 {
+  #counter#{$i} { background-color: nth($colours, $i)}
+}
